@@ -8,7 +8,38 @@
 </head>
 
 <body>
+	<div class="calc">
+		<form class="calc__form" id="order">
+			<div class="calc__field field">
+				<label class="field__label" for="material">Материал</label>
+				<select class="field-select" name="material" id="material" required>
+					<option value="wood">Дерево</option>
+					<option value="metal">Металл</option>
+					<option value="plastic">Пластик</option>
+				</select>
+			</div>
+			<div class="calc__field field">
+				<label class="field__label" for="quantity">Количество</label>
+				<input class="field__input" type="text" id="quantity" required>
+			</div>
+			<div class="calc__field field">
+				<label class="field__label" for="name">Ваше имя</label>
+				<input class="field__input" type="text" id="name" required>
+			</div>
+		</form>
 
+		<div class="calc__summary summary">
+			<span class="summary__label">Скидка (осталось 100 секунд)</span>
+			<span class="summary__value">5%</span>
+		</div>
+
+		<div class="calc__summary summary">
+			<span class="summary__label">Итоговая стоимость</span>
+			<span class="summary__value">12 567 Р</span>
+		</div>
+
+		<button class="calc__button button" type='button' form="order">Оформить заказ</button>
+	</div>
 </body>
 
 </html>
