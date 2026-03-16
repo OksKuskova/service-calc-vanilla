@@ -5,40 +5,47 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Калькулятор услугов</title>
+	<link rel="stylesheet" href="./styles/index.css">
 </head>
 
 <body>
 	<div class="calc">
 		<form class="calc__form" id="order">
-			<div class="calc__field field">
-				<label class="field__label" for="material">Материал</label>
-				<select class="field-select" name="material" id="material" required>
-					<option value="wood">Дерево</option>
-					<option value="metal">Металл</option>
-					<option value="plastic">Пластик</option>
-				</select>
+			<div class="calc__field">
+				<label class="calc__label" for="material">Материал</label>
+				<div class="calc__select-wrapper">
+					<select class="calc__select form-element" name="materal" id="material" required>
+						<option value="wood">Дерево</option>
+						<option value="metal">Металл</option>
+						<option value="plastic">Пластик</option>
+					</select>
+				</div>
 			</div>
-			<div class="calc__field field">
-				<label class="field__label" for="quantity">Количество</label>
-				<input class="field__input" type="text" id="quantity" required>
+			<div class="calc__field">
+				<label class="calc__label" for="quantity">Количество</label>
+				<input class="calc__input form-element" type="text" id="quantity" required>
 			</div>
-			<div class="calc__field field">
-				<label class="field__label" for="name">Ваше имя</label>
-				<input class="field__input" type="text" id="name" required>
+			<div class="calc__field">
+				<label class="calc__label" for="name">Ваше имя</label>
+				<input class="calc__input form-element" type="text" id="name" required>
 			</div>
 		</form>
 
-		<div class="calc__summary summary">
-			<span class="summary__label">Скидка (осталось 100 секунд)</span>
-			<span class="summary__value">5%</span>
-		</div>
 
-		<div class="calc__summary summary">
-			<span class="summary__label">Итоговая стоимость</span>
-			<span class="summary__value">12 567 Р</span>
-		</div>
+		<div class="calc__totals">
+			<div class="calc__discount summary">
+				<span class="summary__label">Скидка (осталось 100 секунд)</span>
+				<span class="summary__value">5%</span>
+			</div>
 
-		<button class="calc__button button" type='button' form="order">Оформить заказ</button>
+			<div class="calc__summary summary">
+				<span class="summary__label">Итоговая стоимость</span>
+				<span class="summary__value">12 567 Р</span>
+			</div>
+
+			<button class="calc__button form-element form-element--green" type='button' form="order">Оформить
+				заказ</button>
+		</div>
 	</div>
 </body>
 
