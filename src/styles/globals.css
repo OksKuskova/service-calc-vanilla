@@ -1,0 +1,16 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	padding: 30px;
+	background-color: var(--color-black);
+	font-family: 'Inter', sans-serif;
+	font-size: small;
+	color: var(--color-white);
+}
+
+input,
+select,
+button {
+	transition-duration: var(--transition-duration);
+}
