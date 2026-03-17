@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Калькулятор услугов</title>
-	<link rel="stylesheet" href="./styles/index.css">
+	<link rel="stylesheet" href="/styles/index.css">
+	<script type="module" src="/js/index.js"></script>
 </head>
 
 <body>
@@ -14,11 +15,7 @@
 			<div class="calc__field">
 				<label class="calc__label" for="material">Материал</label>
 				<div class="calc__select-wrapper">
-					<select class="calc__select form-element" name="materal" id="material" required>
-						<option value="wood">Дерево</option>
-						<option value="metal">Металл</option>
-						<option value="plastic">Пластик</option>
-					</select>
+					<select class="calc__select form-element" name="materal" id="material" required></select>
 				</div>
 			</div>
 			<div class="calc__field">

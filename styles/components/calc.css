@@ -47,6 +47,10 @@
 	rotate: 180deg;
 }
 
+.calc__select-wrapper.disabled::before {
+	display:none;
+}
+
 .calc__select {
 	appearance: none;
 	cursor: pointer;
