@@ -10,7 +10,11 @@
 </head>
 
 <body>
-	<div class="calc">
+	<div class="calc" data-js-calc>
+		<div class="calc__overlay overlay overlay--hidden" data-js-overlay>
+			<span class="overlay__text" data-js-overlay-text>Загрузка...</span>
+		</div>
+
 		<form class="calc__form" id="order">
 			<div class="calc__field">
 				<label class="calc__label" for="material">Материал</label>
@@ -27,7 +31,6 @@
 				<input class="calc__input form-element" type="text" id="name" required>
 			</div>
 		</form>
-
 
 		<div class="calc__totals">
 			<div class="calc__discount summary">
