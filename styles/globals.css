@@ -4,8 +4,9 @@ body {
 	align-items: start;
 	padding: 30px;
 	background-color: var(--color-black);
-	font-family: 'Inter', sans-serif;
+	font-family: 'Inter', system-ui, sans-serif;
 	font-size: small;
+	line-height: 1.5;
 	color: var(--color-white);
 }
 
