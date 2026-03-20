@@ -1,5 +1,7 @@
 import { VALIDATION_MESSAGE_CLASS } from "./form.const.js";
 
+const formElement = document.querySelector('[data-js-form]');
+
 const showElementMessage = (message, element, extraClassName) => {
 	const parent = element.parentElement;
 
@@ -26,4 +28,19 @@ const hideElementMessage = (element) => {
 	messageElement?.remove();
 }
 
-export { showElementMessage, hideElementMessage } 
+const formValidate = () => {
+	let isValid = true;
+	const unvalidFields = [];
+
+	const requiredFields = formElement.querySelectorAll('[required]');
+
+	for (const input of requiredFields) {
+		if (input.value.trim() === '') {
+			isValid = false;
+			unvalidFields.push(input);
+		}
+	}
+	return { isValid, unvalidFields };
+}
+
+export { showElementMessage, hideElementMessage, formValidate } 

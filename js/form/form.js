@@ -1,7 +1,8 @@
 import { NOT_NUMERIC_REGEX, ValidationMessages, ValidationMessageClassModificator } from "./form.const.js";
 import { showElementMessage, hideElementMessage } from "./form.utils.js";
+import { formValidate } from "./form.utils.js";
 
-const { NUMERIC_ONLY } = ValidationMessages;
+const { NUMERIC_ONLY, REQUIRED } = ValidationMessages;
 const { HINT, ERROR } = ValidationMessageClassModificator;
 
 const formElement = document.querySelector('[data-js-form]');
@@ -36,11 +37,23 @@ const handleRequiredFieldInput = (event) => {
 	hideElementMessage(element);
 }
 
+const handleFormSubmit = (event) => {
+	event.preventDefault();
+	const { isValid, unvalidFields } = formValidate();
+
+	if (isValid) {
+		console.log("нужно Сделать отправку на сервер Очистить форму Показать оверлей об успешной отправке")
+	} else {
+		unvalidFields.forEach((field) => showElementMessage(REQUIRED, field, ERROR));
+	}
+};
+
 const initForm = () => {
 	quantityInputElement.addEventListener('input', handleQuantityInput);
 	quantityInputElement.addEventListener('blur', handleQuantityBlur);
 
 	formElement.addEventListener('input', handleRequiredFieldInput);
+
 	formElement.addEventListener('submit', handleFormSubmit);
 };
 
