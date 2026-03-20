@@ -6,12 +6,12 @@
 	background-color: transparent;
 
 	&:not(button):hover {
-  		box-shadow: inset 0 0 6px rgb(255, 255, 255, 0.9);
+  		box-shadow: inset 0 0 6px rgb(255 255 255 / 0.9);
 	}
 
 	&:not(button):focus {
 		outline: none;
-		background-color: var(--color-gray);
+		background-color: var(--color-gray-dark);
 	}
 }
 
@@ -24,7 +24,7 @@ button.form-element:focus {
 }
 button.form-element:focus-visible,
 button.form-element:hover {	
-	background-color: var(--color-gray);
+	background-color: var(--color-gray-dark);
 	color: var(--color-green-light)
 }
 

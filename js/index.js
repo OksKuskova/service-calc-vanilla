@@ -1,4 +1,5 @@
 import { getData } from "./api/api.js";
+import { initForm } from "./form/form.js";
 import { OverlayText } from "./overlay/overlay.const.js";
 import { hideOverlay, showOverlay } from "./overlay/overlay.js";
 import { renderSelect } from "./select.js";
@@ -11,6 +12,7 @@ async function initCalc() {
 		const data = await getData();
 		renderSelect(data);
 		initDiscountTimer();
+		initForm();
 
 	} catch (error) {
 		console.log(error);

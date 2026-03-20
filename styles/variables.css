@@ -4,7 +4,8 @@
 	--color-green-dark: #159920;
 	--color-green-light: #1dca2c;
 	--color-red: #e00808;
-	--color-gray: #292929;
+	--color-gray-dark: #292929;
+	--color-gray-light: #646464;
 
 	--border: 1px solid var(--color-white);
 

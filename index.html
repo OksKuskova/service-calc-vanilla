@@ -18,7 +18,7 @@
 			<span class="overlay__text" data-js-overlay-text>Загрузка...</span>
 		</div>
 
-		<form class="calc__form" id="order">
+		<form class="calc__form" id="order" data-js-form novalidate>
 			<div class="calc__field">
 				<label class="calc__label" for="material">Материал</label>
 				<div class="calc__select-wrapper" data-js-select-wrapper>
@@ -27,7 +27,7 @@
 			</div>
 			<div class="calc__field">
 				<label class="calc__label" for="quantity">Количество</label>
-				<input class="calc__input form-element" type="text" id="quantity" required>
+				<input class="calc__input form-element" type="text" id="quantity" autocomplete="off" required>
 			</div>
 			<div class="calc__field">
 				<label class="calc__label" for="name">Ваше имя</label>
@@ -46,7 +46,7 @@
 				<span class="summary__value">12 567 Р</span>
 			</div>
 
-			<button class="calc__button form-element form-element--green" type='button' form="order">Оформить
+			<button class="calc__button form-element form-element--green" type='submit' form="order">Оформить
 				заказ</button>
 		</div>
 	</div>
