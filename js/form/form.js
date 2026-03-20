@@ -1,6 +1,7 @@
 import { NOT_NUMERIC_REGEX, ValidationMessages, ValidationMessageClassModificator } from "./form.const.js";
 import { showElementMessage, hideElementMessage } from "./form.utils.js";
 import { formValidate } from "./form.utils.js";
+import { updateTotal } from "../total/total.js";
 
 const { NUMERIC_ONLY, REQUIRED } = ValidationMessages;
 const { HINT, ERROR } = ValidationMessageClassModificator;
@@ -54,6 +55,7 @@ const initForm = () => {
 
 	formElement.addEventListener('input', handleRequiredFieldInput);
 
+	formElement.addEventListener('change', updateTotal);
 	formElement.addEventListener('submit', handleFormSubmit);
 };
 

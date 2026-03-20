@@ -1,3 +1,4 @@
+import { updateTotal } from "../total/total.js";
 import { START_TIMER_VALUE, START_DISCOUNT_VALUE } from "./timer.const.js";
 
 const timerElement = document.querySelector('[data-js-timer]');
@@ -13,12 +14,12 @@ const stopTimer = () => {
 
 	discount = 0;
 	discountElement.textContent = discount;
+	updateTotal();
 }
 
 const initDiscountTimer = () => {
 	timerElement.textContent = timer;
 	discountElement.textContent = discount;
-	console.log('intervalId:', intervalId);
 
 	intervalId = setInterval(() => {
 		--timer;
@@ -26,7 +27,6 @@ const initDiscountTimer = () => {
 
 		if (timer <= 0) {
 			stopTimer();
-			console.log('intervalId:', intervalId);
 		}
 	}, 1000);
 }

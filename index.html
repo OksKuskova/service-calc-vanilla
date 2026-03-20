@@ -31,7 +31,7 @@
 			</div>
 			<div class="calc__field">
 				<label class="calc__label" for="name">Ваше имя</label>
-				<input class="calc__input form-element" type="text" id="name" required>
+				<input class="calc__input form-element" type="text" id="name" autocomplete="off" required>
 			</div>
 		</form>
 
@@ -43,11 +43,12 @@
 
 			<div class="calc__summary summary">
 				<span class="summary__label">Итоговая стоимость</span>
-				<span class="summary__value">12 567 Р</span>
+				<span class="summary__value"><span data-js-summary></span> P</span>
 			</div>
 
 			<button class="calc__button form-element form-element--green" type='submit' form="order">Оформить
-				заказ</button>
+				заказ
+			</button>
 		</div>
 	</div>
 </body>
