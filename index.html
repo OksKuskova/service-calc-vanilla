@@ -22,16 +22,17 @@
 			<div class="calc__field">
 				<label class="calc__label" for="material">Материал</label>
 				<div class="calc__select-wrapper" data-js-select-wrapper>
-					<select class="calc__select form-element" name="materal" id="material" required data-js-select></select>
+					<select class="calc__select form-element" name="material" id="material" required data-js-select></select>
 				</div>
 			</div>
 			<div class="calc__field">
 				<label class="calc__label" for="quantity">Количество</label>
-				<input class="calc__input form-element" type="text" id="quantity" autocomplete="off" required>
+				<input class="calc__input form-element" type="text" id="quantity" name="quantity" autocomplete="off"
+					required>
 			</div>
 			<div class="calc__field">
 				<label class="calc__label" for="name">Ваше имя</label>
-				<input class="calc__input form-element" type="text" id="name" autocomplete="off" required>
+				<input class="calc__input form-element" type="text" id="name" name="name" autocomplete="off" required>
 			</div>
 		</form>
 
@@ -46,9 +47,12 @@
 				<span class="summary__value"><span data-js-summary></span> P</span>
 			</div>
 
-			<button class="calc__button form-element form-element--green" type='submit' form="order">Оформить
-				заказ
-			</button>
+			<div class="calc__field">
+				<button class="calc__button form-element form-element--green" type='submit' form="order"
+					data-js-form-submit>Оформить заказ
+				</button>
+			</div>
+
 		</div>
 	</div>
 </body>

@@ -14,6 +14,7 @@ const stopTimer = () => {
 
 	discount = 0;
 	discountElement.textContent = discount;
+	timerElement.textContent = 0;
 	updateTotal();
 }
 
@@ -31,4 +32,4 @@ const initDiscountTimer = () => {
 	}, 1000);
 }
 
-export { initDiscountTimer }
+export { initDiscountTimer, stopTimer }

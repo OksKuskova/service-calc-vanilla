@@ -8,7 +8,7 @@ async function apiRequest(url, errorText, method = GET, body = null) {
 		const response = await fetch(url, { method, body });
 
 		if (!response.ok) {
-			throw new Error(`${errorText} (${response.status})`)
+			throw new Error(`${errorText} (${response.status})`);
 		}
 
 		const data = await response.json();
@@ -21,4 +21,16 @@ async function apiRequest(url, errorText, method = GET, body = null) {
 
 const getData = () => apiRequest('/materials.json', GET_ERROR);
 
-export { getData };
+async function apiFakeRequest(errorText, body) {
+	await new Promise(resolve => setTimeout(resolve, 2000));
+
+	if (Math.random() < 0.5) {
+		return { ok: false, status: 404, error: errorText };
+	}
+	console.log(`Данные, отправленные на сервер: ${JSON.stringify(body)} `)
+	return { ok: true, status: 200 };
+}
+
+const sendData = (data) => apiFakeRequest(POST_ERROR, data);
+
+export { getData, sendData };

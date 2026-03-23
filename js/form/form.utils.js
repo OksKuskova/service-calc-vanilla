@@ -43,4 +43,15 @@ const formValidate = () => {
 	return { isValid, unvalidFields };
 }
 
-export { showElementMessage, hideElementMessage, formValidate } 
+const getFormData = () => {
+	const formData = new FormData(formElement);
+	const data = Object.fromEntries(formData.entries());
+
+	return {
+		material: data.material,
+		quantity: data.quantity,
+		name: data.name.trim(),
+	}
+}
+
+export { showElementMessage, hideElementMessage, formValidate, getFormData } 

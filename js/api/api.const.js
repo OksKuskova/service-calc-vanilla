@@ -5,6 +5,6 @@ export const Method = {
 
 export const ErrorText = {
 	GET_ERROR: 'Не удалось загрузить данные',
-	POST_ERROR: 'Ошибка загрузки файла',
+	POST_ERROR: 'Сервис временно недоступен, мы уже чиним',
 };
 
